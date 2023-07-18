@@ -1,0 +1,22 @@
+<div class="grid-container">
+    <div *ngFor="let player of players$ | async">
+
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"><img mat-card-image src={{player.club?.logo}} alt="Club logo"></div>
+                <mat-card-title>{{player.playerName}}</mat-card-title>
+                <mat-card-subtitle>{{player.club?.clubName}}</mat-card-subtitle>
+                <mat-card-subtitle>{{player.position}}</mat-card-subtitle>
+                <mat-card-subtitle>{{player.price}}</mat-card-subtitle>
+            </mat-card-header>
+            
+            <mat-card-content>
+                <p>
+                    {{player.playerId}}
+                </p>
+            </mat-card-content>
+
+        </mat-card>
+
+    </div>
+</div>
